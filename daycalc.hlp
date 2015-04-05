@@ -1,0 +1,48 @@
+dc -h == zobrazi napovedu
+dc -t == zobrazi aktualny datum, cas, a meniny
+dc -t d m r == vypocita rozdiel od aktualneho datumu do datumu d m r
+dc -d d1 m1 r1 d2 m2 r2 == vypocita rozdiel medzi zadanymi datumami
+dc -n meno == vypise kedy ma meniny zadane meno
+dc -n d m == vypise ake meno pripada na datum d m
+dc -y r == vypise ci rok r je priestupny
+dc == spusti front-end DayCalculator 3.0 SK
+
+Program Day Calculator 3.0 SK sluzi na vypocet rozdielu medzi dvomi datumami.
+Umoznuje uzivatelovi zadat dva datumy, alebo pocitat od aktualneho datumu. 
+Vysledok zobrazuje v dnoch, rokoch a mesiacoch. Po vypocte umozni vysledok
+ulozit, alebo exportovat do TXT suboru. Navyse umoznuje zistit meniny podla
+mena alebo datumu a overit ci je zadany rok priestupny.  
+Tento program je open source, bol napisany v C++ pomocou Dev-C++.
+_____ _____ _____ _____ ***PowerJ*** _____ _____ _____ _____ _____  
+
+****** ****** ****** ****** Historia verzii: ****** ****** ****** ******  
+3.0 - Uplne prerobeny zdrojak, program teraz pouziva nove triedy Calendar,
+      dynamicku spravu pamate, pridana funkcia na zistovanie menin,
+      pridana podpora binarnych PWJ suborov, pouzivanie vynimiek na 
+      testovanie chyb vstupu, pridana funkcia na zobrazenie presneho casu
+      program je rozdeleny na casti, vychytane bugy so vstupom a subormi,
+      podpora prikazoveho riadku.
+       
+2.0 - Uplne prekopany zdrojak, rozdeleny na casti vyhodene zbytocnosti,
+      prerobene menu, zachytavanie vynimiek ...
+
+1.5 - Prepracovany zdrojak, program je OOP, datumy mozno zadat obratene, 
+      program teraz pouziva dyn. alokovanie pamate, pridana class Today
+
+1.3 - Funkcia SetMonth() pouziva teraz vektor, ocistenie kodu od balastu,
+      pridane pocitanie priestup. rokov, opraveny bug netestuje dni mesiacov 
+
+1.2 - Vylepsena funkcia count(), pouziva difftime() z ctime.h, zmizol bug s
+      nahodnymi nekorektnymi vysledkami, nepresnost je mensia ako predtym
+
+1.1 - Zobrazuje aktualny datum, cas, opraveny bug netestovanie datum2>datum1 
+      dalej ostava nepresnost pocitania a zobrazovania obcasnych nezmyslov 
+      vo vysledku 
+
+1.0 - zname bugy: nepocita s priestupnymi rokmi, netestuje ci je 
+      druhy datum neskor ako prvy, nepresnost, nahodne nezmysly vo vysledku. 
+
+0.1 - Prevod programu Freedom0.7 do OOP prvy pokus :-)
+
+Freedom0.7 - pocita pocet dni od zadaneho datumu do 30.8.2013
+Freedom0.1 - prvy pokus o programovanie zo dna 23. 9. 2008 :-)
